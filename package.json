@@ -1,6 +1,7 @@
 {
   "name": "estacionamento",
   "version": "1.0.0",
+  "type": "module",
   "description": "Beckend node",
   "main": "index.js",
   "scripts": {
@@ -16,6 +17,7 @@
   "author": "Wellington Rufino",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "mssql": "^7.2.1"
   }
 }
