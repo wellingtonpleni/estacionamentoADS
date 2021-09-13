@@ -1,0 +1,43 @@
+//Teste de requisições REST - veiculos
+@baseURL = http://localhost:4000/api
+@placa = ABC1234
+###
+//GET - Lista todos os veiculos
+GET {{baseURL}}/veiculos
+Content-Type: application/json
+
+###
+//GET - Lista apenas um veiculo pela placa
+GET {{ baseURL }}/veiculos/{{ placa }}
+Content-Type: application/json
+
+###
+//POST - Inclui um novo veiculo
+POST {{baseURL}}/veiculos
+Content-Type: application/json
+
+{
+    "placa":"XYZ2233",
+    "nome":"Tiggo 3X",
+    "descricao":"Motor 1.0 Turbo",
+    "fabricacao":"2021-03-27",
+    "preco": 99990.00
+}
+
+###
+//PUT - Altera um veiculo
+PUT {{baseURL}}/veiculos
+Content-Type: application/json
+
+{
+    "placa":"XYZ2233",
+    "nome":"Tiggo 3X Turbo",
+    "descricao":"Motor 1.0 Turbo",
+    "fabricacao":"2021-03-27",
+    "preco": 99990.00
+}
+
+###
+//DELETE - Apaga um veículo através da placa
+DELETE {{baseURL}}/veiculos/{{placa}}
+Content-Type: application/json
